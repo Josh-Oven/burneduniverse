@@ -1,3 +1,263 @@
-#initial-test {
-  color:  blue;
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+@import url('https://fonts.googleapis.com/css?family=Quicksand:300');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pattaya&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Goblin+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Reggae+One&display=swap');
+
+$retro: 'Press Start 2P';
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+#body-index {
+  background-image: url('assets/images/star-background.png');
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: black;
+}
+
+#header {
+  z-index: 10;
+  position: fixed;
+  width: 100%;
+  height: 5%;
+  // background-color: rgba(0, 0, 0, .99);
+  // border-bottom: 1px solid white;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  // display: none;
+
+  #buddy {
+    width: 20px;
+    height: 20px;
+    background-image: url('assets/images/ghost-1.png');
+    background-position: center;
+    background-size: contain;
+    margin-top: 18px;
+    margin-left: 25px;
+    opacity: .2
+    // border: 1px solid white;
+
+    // img {
+    //   width: 100%;
+    //   height: 100%;
+    // }
+  }
+
+  #nav-bar {
+    position: absolute;
+    width: auto;
+    height: 100%;
+    margin-left: 100%;
+    transform: translate(-50%);
+    // border: 1px solid white;
+    display: flex;
+    align-items: center;
+    // justify-content: space-between;
+
+    #hamburger {
+      width: auto;
+      height: auto;
+      // border: 1px solid white;
+      margin-right: 75px;
+      margin-top: 40px;
+      // background-color: rgba(0,0,0,.5);
+
+      i {
+        font-size: 25px;
+      }
+    }
+
+    // .nav-link-container {
+    //   margin: 0px 20px 0px 20px;
+    //   width: auto;
+    //   // border: 1px solid white;
+    //
+    //   p {
+    //     font-family: Quicksand;
+    //     color: white;
+    //     font-size: 10px;
+    //     // font-weight: bold;
+    //   }
+    // }
+  }
+}
+
+#landing-banner {
+  // background-image: url('assets/images/star-background.png');
+  // background-position: center;
+  // background-attachment: fixed;
+  // background-size: cover;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+
+}
+
+#index-title-container {
+  // border: 1px solid white;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+
+  img {
+    width: 80%;
+    z-index: 10;
+    position: fixed;
+    transform: translateY(-50%);
+    // border: 1px solid yellow;
+  }
+
+  p {
+    font-family: Pattaya;
+    // font-family: Goblin One;
+    // font-family: Reggae One;
+    font-size: 150px;
+    color: white;
+    position: fixed;
+    transform: translateY(-50%);
+    // background-color: black;
+  }
+}
+
+#project-banner {
+  width: 100%;
+  height: auto;
+  // background-color: rgba(0, 0, 0, .5);
+  background: linear-gradient(to top, black 60%, rgba(0, 0, 0, 0));
+  // border: 1px solid white;
+  margin-left: 50%;
+  transform: translate(-50%);
+  display: flex;
+  justify-content: space-around;
+
+  @media(min-width: 1400px){
+    width: 1400px;
+  }
+
+  .text-box {
+    width: 96%;
+    height: auto;
+    // border: 1px solid white;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+
+    @media(min-width: 500px){
+      width: 500px;
+    }
+    @media(min-width: 1300px){
+      width: 1000px;
+    }
+
+    .text-box-title-container {
+      width: 100%;
+      height: auto;
+      // border: 1px solid yellow;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      margin-bottom: 20px;
+
+      .text-box-title {
+        font-family: Quicksand;
+        color: white;
+        font-size: 40px;
+
+        @media(min-width: 1300px){
+          font-size: 60px;
+        }
+      }
+    }
+
+    .text-box-text-container {
+      width: 100%;
+      height: auto;
+      // border: 1px solid yellow;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      margin-bottom: 20px;
+
+      .text-box-text {
+        text-align: right;
+        font-family: Quicksand;
+        color: white;
+        font-size: 20px;
+
+        @media(min-width: 1300px){
+          font-size: 25px;
+        }
+      }
+    }
+  }
+}
+
+#image-box {
+  background-image: url('assets/images/star-background.png');
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  width: 100%;
+  height: 40vh;
+  // border: 1px solid white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+
+  .image-box-image {
+    // border: 1px solid white;
+    width: 60%;
+    height: 25%;
+    background-image: url('../assets/images/spaceship-complete.gif');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:contain;
+  }
+
+  .view-button-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .view-button {
+    width: auto;
+    height: auto;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 5px 20px 5px 20px;
+
+    p {
+      text-align: right;
+      font-family: Quicksand;
+      color: white;
+      font-size: 25px;
+
+      @media(min-width: 1300px){
+        font-size: 35px;
+      }
+    }
+
+  }
 }
