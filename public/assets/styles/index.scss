@@ -110,6 +110,19 @@ a {
 
 }
 
+main {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to top, black 70%, rgba(0, 0, 0, .3));
+
+  .test-text {
+    font-size: 150px;
+    font-family: Quicksand;
+    color: white;
+
+  }
+}
+
 #index-title-container {
   // border: 1px solid white;
   width: 100%;
@@ -121,7 +134,6 @@ a {
     z-index: 10;
     position: fixed;
     transform: translateY(-50%);
-    // border: 1px solid yellow;
   }
 
   p {
@@ -208,13 +220,57 @@ a {
       }
     }
   }
+
+}
+
+#preview-container {
+  margin-top: 75px;
+  margin-left: 50%;
+  margin-bottom: 150px;
+  transform: skewX(-15deg) translate(-50%);
+  width: 600px;
+  height: 180px;
+  // border: 1px solid yellow;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  // overflow: hidden;
+  background: linear-gradient(to top, black 60%, rgba(0, 0, 0, 0));
+
+  #project-preview:hover {
+    height: 150%;
+    transition: .2s;
+
+    #project {
+      // width: 300%;
+      margin-left: -20%;
+      transition: .1s;
+    }
+  }
+
+  #project-preview {
+    width: 100px;
+    height: 100%;
+    overflow: hidden;
+
+    #project {
+      margin-left: -12%;
+      height: 150%;
+      width: 200%;
+      transform: skewX(15deg);
+      background-position: center;
+      background-attachment: fixed;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
 }
 
 #image-box {
-  background-image: url('assets/images/star-background.png');
-  background-position: center;
-  background-attachment: fixed;
-  background-size: cover;
+  // background-image: url('assets/images/star-background.png');
+  // background-position: center;
+  // background-attachment: fixed;
+  // background-size: cover;
   width: 100%;
   height: 40vh;
   // border: 1px solid white;
