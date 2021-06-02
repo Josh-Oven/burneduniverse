@@ -6,6 +6,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Pattaya&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Goblin+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Reggae+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Exo+2:700');
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&display=swap');
 
 $retro: 'Press Start 2P';
 
@@ -28,6 +30,7 @@ a {
   background-attachment: fixed;
   background-size: cover;
   background-color: black;
+  padding-bottom: 500px;
 }
 
 #header {
@@ -150,7 +153,7 @@ main {
 
 #project-divider {
   width: 100vw;
-  height: 20vh;
+  height: 10vh;
   background-image:
     radial-gradient(black, rgba(0,0,0,.5));
 }
@@ -165,15 +168,20 @@ main {
   transform: translate(-50%);
   display: flex;
   justify-content: space-around;
+  background-size: cover;
+  background-repeat: no-repeat;
 
   @media(min-width: 1400px){
     width: 1400px;
   }
 
 #left-fade-background {
-  width: 100%;
-  background-image: radial-gradient(ellipse farthest-corner at 0 -140%, rgba(0,0,0,0) 0%, rgba(0,0,0,.5) 30%, black 70%);
+  width: 120%;
+  background-image: url('../assets/images/angle-fade-background.png');
   transform: rotateY(180deg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  // margin-left: -20%;
 
   .top-fade {
     height: 10%;
@@ -194,9 +202,14 @@ main {
 
   #fade-background {
     width: 100%;
-    background-image:
-      radial-gradient(ellipse farthest-corner at 0 140%, rgba(0,0,0,0) 0%, rgba(0,0,0,.5) 30%, black 70%);
+    // background-image:
+    //   radial-gradient(ellipse farthest-corner at 0 140%, rgba(0,0,0,0) 0%, rgba(0,0,0,.5) 30%, black 70%);
+      background-image: url('../assets/images/angle-fade-background.png');
+      // transform: rotateX(180deg);
+      background-repeat: no-repeat;
+      background-size: cover;
     // border: 1px solid white;
+    // overflow: hidden;
 
 
     .top-fade {
@@ -224,6 +237,8 @@ main {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
+    // margin-top: 50%;
+    // transform: translate(null, -50%);
 
     @media(min-width: 500px){
       width: 500px;
@@ -239,15 +254,16 @@ main {
       display: flex;
       align-items: center;
       justify-content: flex-end;
-      margin-bottom: 20px;
+      margin-bottom: 5px;
 
       .text-box-title {
         font-family: Quicksand;
         color: white;
         font-size: 40px;
+        // font-weight: bold;
 
         @media(min-width: 1300px){
-          font-size: 60px;
+          font-size: 80px;
         }
       }
     }
@@ -324,13 +340,15 @@ main {
   // background-position: center;
   // background-attachment: fixed;
   // background-size: cover;
-  width: 100%;
-  height: 40vh;
+  width: 150px;
+  height: 60px;
   // border: 1px solid white;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
+  position: absolute;
+  bottom: -100px;
 
   .image-box-image {
     // border: 1px solid white;
@@ -344,21 +362,22 @@ main {
 
   .view-button-container {
     width: 100%;
-    height: auto;
+    height: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
   }
 
   .view-button {
-    width: auto;
-    height: auto;
+    text-align: center;
+    width: 100%;
+    height: 80%;
     border: 1px solid white;
     border-radius: 5px;
     padding: 5px 20px 5px 20px;
 
     p {
-      text-align: right;
+      text-align: center;
       font-family: Quicksand;
       color: white;
       font-size: 25px;
