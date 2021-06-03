@@ -46,8 +46,8 @@ a {
   // display: none;
 
   #buddy {
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
     background-image: url('assets/images/ghost-1.png');
     background-position: center;
     background-size: contain;
@@ -106,6 +106,7 @@ a {
   // background-position: center;
   // background-attachment: fixed;
   // background-size: cover;
+
   width: 100%;
   height: 100vh;
   display: flex;
@@ -137,6 +138,7 @@ main {
     z-index: 10;
     position: fixed;
     transform: translateY(-50%);
+    background: linear-gradient(to top, black 70%, rgba(0, 0, 0, .3));
   }
 
   p {
