@@ -132,6 +132,7 @@ main {
   width: 100%;
   display: flex;
   justify-content: space-around;
+  position: fixed;
 
   img {
     width: 80%;
@@ -142,14 +143,20 @@ main {
   }
 
   p {
-    font-family: Pattaya;
+    font-family: Quicksand;
     // font-family: Goblin One;
     // font-family: Reggae One;
-    font-size: 150px;
+    font-size: 140px;
     color: white;
-    position: fixed;
-    transform: translateY(-50%);
-    // background-color: black;
+    // position: fixed;
+    transform: translateY(-50%, 25%);
+    background-color: black;
+    text-decoration: underline;
+
+
+    span {
+      animation: blink .7s infinite;
+    }
   }
 }
 
@@ -204,14 +211,10 @@ main {
 
   #fade-background {
     width: 100%;
-    // background-image:
-    //   radial-gradient(ellipse farthest-corner at 0 140%, rgba(0,0,0,0) 0%, rgba(0,0,0,.5) 30%, black 70%);
-      background-image: url('../assets/images/angle-fade-background.png');
-      // transform: rotateX(180deg);
-      background-repeat: no-repeat;
-      background-size: cover;
-    // border: 1px solid white;
-    // overflow: hidden;
+    // rgba(0,0,0,.5) 30%, black 70%);
+    background-image: url('../assets/images/angle-fade-background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
 
 
     .top-fade {
@@ -400,5 +403,14 @@ main {
     height: 100vh;
     background-image:
       radial-gradient(ellipse farthest-corner at 0 140%, rgba(0,0,0,0) 0%, rgba(0,0,0,.5) 30%, black 70%);
+  }
+}
+
+@keyframes blink {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
